@@ -2,7 +2,7 @@
 
 namespace SpringboardVR\EventGatewayService\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 use SpringboardVR\EventGatewayService\Http\Requests\EventRequest;
 
