@@ -16,6 +16,6 @@ class EventsController extends Controller
 	 */
     public function handle(EventRequest $request)
     {
-    	event($request->input('channel.name'), $request->input('data'));
+    	event($request->input('channel.name'), [$request->input('data')]);
     }
 }
