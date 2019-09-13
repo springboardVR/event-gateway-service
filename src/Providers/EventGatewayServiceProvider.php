@@ -5,8 +5,7 @@ namespace SpringboardVR\EventGatewayService\Providers;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
 use Route;
-use SpringboardVr\Jobs\BroadcastEvent;
-use SpringboardVr\Services\User\Entities\User;
+use SpringboardVR\EventGatewayService\Jobs\BroadcastEvent;
 
 class EventGatewayServiceProvider extends ServiceProvider
 {
