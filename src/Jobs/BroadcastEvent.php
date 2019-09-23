@@ -50,7 +50,7 @@ class BroadcastEvent implements ShouldQueue
         $client = new Client();
 
         $data = [
-            'service' => 'api',
+            'service' => config('event-gateway.service.name'),
             'channel' => ['name' => config('event-gateway.service.name').'.'.$this->name],
             'data' => $this->payload,
         ];

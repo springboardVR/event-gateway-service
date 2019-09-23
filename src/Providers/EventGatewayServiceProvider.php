@@ -45,7 +45,9 @@ class EventGatewayServiceProvider extends ServiceProvider
                     $data = [];
                 }
 
-                BroadcastEvent::dispatch($channel, $data)->onQueue(config('event-gateway.queue_name'));
+                BroadcastEvent::dispatch($channel, $data)
+                    ->onQueue(config('event-gateway.queue_name'))
+                    ->onConnection(config('event-gateway.queue_connection'));
             });
         }
     }
