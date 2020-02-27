@@ -42,7 +42,7 @@ class EventGatewayServiceProvider extends ServiceProvider
                 } elseif (is_array($payload)) {
                     $data = $payload;
                 } else {
-                    $data = [];
+                    $data = (array) $payload;
                 }
 
                 BroadcastEvent::dispatch($channel, $data)
